@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crack Head Gaming Studio | Jalandhar</title>
+    <!-- Google Fonts for a futuristic gaming vibe -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for clean icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #060713;
+            --card-bg: #0d0f26;
+            --cyan: #00f0ff;
+            --pink: #ff007f;
+            --text-light: #ffffff;
+            --text-gray: #a5a7c2;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .brand-name {
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        /* Container utility */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: radial-gradient(circle at center, #1b113a 0%, var(--bg-color) 70%);
+            border-bottom: 2px solid #1a153a;
+        }
+
+        .logo-placeholder {
+            font-size: 3rem;
+            color: var(--cyan);
+            text-shadow: 0 0 15px var(--cyan);
+            margin-bottom: 10px;
+        }
+
+        .brand-name {
+            font-size: 2.8rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--text-light);
+            text-shadow: 0 0 10px rgba(255,255,255,0.2);
+        }
+
+        .studio-tag {
+            color: var(--pink);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-top: -5px;
+            text-transform: uppercase;
+        }
+
+        .slogan {
+            font-style: italic;
+            color: var(--text-gray);
+            margin: 15px 0;
+            font-size: 1.2rem;
+        }
+        
+        .slogan span {
+            color: var(--cyan);
+            font-weight: bold;
+        }
+
+        .info-badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .badge.cyan { border-color: var(--cyan); color: var(--cyan); }
+        .badge.pink { border-color: var(--pink); color: var(--pink); }
+
+        /* Game Banner Slider */
+       .game-slider{
+    position:relative;
+    overflow:hidden;
+    height:420px;
+    margin:10px 0 26px;
+    background:#090b1d;
+    border:none;
+    border-radius:12px;
+    box-shadow:none;
+}
+
+        .slider-track{
+display:flex;
+width:300%;
+height:100%;
+transition:transform .6s ease;
+}
+
+      .game-slide{
+width:33.333%;
+height:100%;
+flex-shrink:0;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#090b1d;
+}
+
+.game-slide img{
+width:100%;
+height:100%;
+object-fit:contain;
+display:block;
+}
+
+     
+        .slide-copy {
+            max-width: 560px;
+            padding: 18px;
+            border-left: 3px solid var(--cyan);
+            background: rgba(6, 7, 19, 0.42);
+            backdrop-filter: blur(2px);
+        }
+
+/* Payment QR */
+
+.payment-card{
+    display:grid;
+    grid-template-columns:1fr 280px;
+    gap:30px;
+    align-items:center;
+    background:linear-gradient(135deg,#10142d,#090b1d);
+    border:2px solid var(--cyan);
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 0 25px rgba(0,240,255,.15);
+}
+
+.payment-copy h3{
+    color:var(--cyan);
+    font-size:1.7rem;
+    margin-bottom:10px;
+    text-transform:uppercase;
+}
+
+.payment-copy p{
+    color:var(--text-gray);
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+.upi-id{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.12);
+    padding:12px 18px;
+    border-radius:10px;
+    font-family:'Orbitron',sans-serif;
+    color:#fff;
+}
+
+.upi-id i{
+    color:var(--pink);
+}
+
+.qr-frame{
+    background:#fff;
+    padding:15px;
+    border-radius:18px;
+    border:2px solid var(--cyan);
+    box-shadow:
+        0 0 15px rgba(0,240,255,.35),
+        0 0 30px rgba(255,0,127,.18);
+}
+
+.qr-frame img{
+    width:100%;
+    display:block;
+    border-radius:12px;
+}
+
+@media(max-width:768px){
+
+    .payment-card{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .upi-id{
+        justify-content:center;
+    }
+
+    .qr-frame{
+        max-width:280px;
+        margin:auto;
+    }
+
+}
+        .slide-kicker {
+            color: var(--cyan);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .game-slide h2 {
+            font-size: 2rem;
+            line-height: 1.1;
+            text-transform: uppercase;
+            text-shadow: 0 0 12px rgba(255,255,255,0.25);
+        }
+
+        .game-slide p {
+            color: var(--text-gray);
+            font-size: 1rem;
+            margin-top: 8px;
+        }
+
+        .slider-dots {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 12px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .slider-dot {
+            width: 24px;
+            height: 4px;
+            border: 0;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.25);
+            cursor: pointer;
+        }
+
+        .slider-dot.active {
+            background: var(--cyan);
+            box-shadow: 0 0 10px var(--cyan);
+        }
+
+        @media(max-width:520px){
+    .game-slider,
+    .game-slide{
+        height:220px;
+    }
+}
+
+            .game-slide {
+                min-height: 210px;
+                padding: 18px 14px 30px;
+                background-image:
+                    linear-gradient(0deg, rgba(6, 7, 19, 0.95), rgba(6, 7, 19, 0.34) 72%),
+                    var(--poster);
+            }
+
+            .slide-copy {
+                max-width: 100%;
+                padding: 12px;
+            }
+
+            .game-slide h2 {
+                font-size: 1.35rem;
+            }
+
+            .game-slide p {
+                font-size: 0.9rem;
+                line-height: 1.25;
+            }
+        }
+
+        /* Section Styling */
+        section {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .title-cyan { color: var(--cyan); text-shadow: 0 0 10px rgba(0,240,255,0.4); }
+        .title-pink { color: var(--pink); text-shadow: 0 0 10px rgba(255,0,127,0.4); }
+
+        /* Pricing Cards Grid */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 0;
+        }
+
+        .price-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 14px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .price-card.cyan-card { border: 2px solid var(--cyan); box-shadow: 0 0 15px rgba(0, 240, 255, 0.1); }
+        .price-card.pink-card { border: 2px solid var(--pink); box-shadow: 0 0 15px rgba(255, 0, 127, 0.1); }
+
+        .price-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .price-row {
+            margin: 8px 0;
+            padding-bottom: 6px;
+        }
+        .price-row:not(:last-child) {
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .duration {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .amount {
+            font-size: 1.35rem;
+            font-weight: 700;
+            font-family: 'Orbitron', sans-serif;
+        }
+        .cyan-card .amount { color: var(--cyan); }
+        .pink-card .amount { color: var(--pink); }
+
+        /* Daily Pass Banner */
+        .daily-pass {
+            background: linear-gradient(135deg, #120a2b 0%, #2b0c26 100%);
+            border: 2px dashed #9d00ff;
+            border-radius: 12px;
+            padding: 14px;
+            text-align: center;
+            margin-top: 0;
+            box-shadow: 0 0 20px rgba(157, 0, 255, 0.2);
+        }
+
+        .daily-pass h3 {
+            color: #bd5eff;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .daily-pass p {
+            font-size: 0.8rem;
+            margin: 0;
+        }
+@media (min-width: 769px){
+
+    .daily-pass{
+        grid-column: 2 / 4;
+        justify-self: center;
+        width: 100%;
+        max-width: 300px;
+    }
+
+}
+        .daily-pass .pass-price {
+            font-size: 1.55rem;
+            font-family: 'Orbitron', sans-serif;
+            color: #fff;
+            text-shadow: 0 0 10px #bd5eff;
+            margin: 8px 0 0;
+        }
+
+        /* Games List Toggles */
+        .games-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media(max-width: 768px) {
+            .games-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .game-box {
+            background: var(--card-bg);
+            border: 1px solid #1a1d4a;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .game-box h3 {
+            margin-bottom: 15px;
+            border-bottom: 2px solid rgba(255,255,255,0.1);
+            padding-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .game-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .game-list li {
+            background: rgba(255,255,255,0.02);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            border-left: 3px solid transparent;
+        }
+        .single-player-box li { border-left-color: var(--cyan); }
+        .two-player-box li { border-left-color: var(--pink); }
+
+        /* Why Choose Us Icons */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            text-align: center;
+        }
+
+        @media(max-width: 768px) {
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .features-grid :nth-child(4), .features-grid :nth-child(5) {
+                grid-column: span 1;
+            }
+        }
+        @media(max-width: 480px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+@media (max-width:480px){
+    .features-grid .feature-item:last-child{
+        grid-column: 1 / 3;
+        justify-self: center;
+        width: 48%;
+    }
+}
+.feature-center{
+    grid-column:2 / 3;
+}
+
+@media (min-width:769px){
+    .features-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+        .feature-item {
+            background: rgba(255,255,255,0.02);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+        }
+
+        .feature-item i {
+            font-size: 1.5rem;
+            color: var(--cyan);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        /* Quick Action Buttons for Mobile layout */
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            max-width: 460px;
+            box-sizing: border-box;
+            padding: 16px;
+            border-radius: 12px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            line-height: 1.25;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: 0.2s;
+        }
+
+        .btn-call {
+            background: var(--cyan);
+            color: #000;
+            box-shadow: 0 4px 15px rgba(0, 240, 255, 0.4);
+        }
+
+        .btn-insta {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
+        }
+
+        @media(max-width: 420px) {
+            .btn {
+                font-size: 1rem;
+                gap: 8px;
+                padding: 14px 12px;
+            }
+        }
+
+        /* Footer/Contact Details */
+        footer {
+            background: #02030a;
+            padding: 40px 20px;
+            border-top: 2px solid #1a153a;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+            text-align: left;
+            max-width: 500px;
+            margin: 0 auto 30px;
+        }
+
+        .info-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .info-row i {
+            font-size: 1.4rem;
+            margin-top: 3px;
+        }
+        .info-row .fa-phone { color: var(--cyan); }
+        .info-row .fa-instagram { color: var(--pink); }
+        .info-row .fa-location-dot { color: var(--cyan); }
+
+        .footer-tagline {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+        
+        .footer-tagline span {
+            color: var(--pink);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo-placeholder">
+            <img src="images/logo.png" alt="Logo" class="logo" width="300">
+        </div>
+        <h1 class="brand-name">Crack Head</h1>
+        <div class="studio-tag">Gaming Studio</div>
+        <p class="slogan">"Level up your life" <br><span>Gaming is not a hobby, it's a way of life</span></p>
+        
+        <div class="info-badges">
+            <div class="badge cyan"><i class="fa-solid fa-clock"></i> 10:30 AM - 9:30 PM</div>
+            <div class="badge pink"><i class="fa-solid fa-gamepad"></i> PS4 & PS5 Available</div>
+        </div>
+    </header>
+
+    <div class="container">
+        
+      <!-- Game Banner Slider -->
+<div class="game-slider" aria-label="Featured games">
+    <div class="slider-track">
+        <div class="game-slide"><img src="posters/gta-5.jpg" alt="GTA 5"></div>
+        <div class="game-slide"><img src="posters/tekken-8.jpg" alt="Tekken 8"></div>
+        <div class="game-slide"><img src="posters/spider-man-2.jpg" alt="Spider-Man 2"></div>
+    </div>
+    <div class="slider-dots" aria-hidden="true">
+        <button class="slider-dot active" type="button"></button>
+        <button class="slider-dot" type="button"></button>
+        <button class="slider-dot" type="button"></button>
+    </div>
+</div>
+
+<!-- Mobile Action Center -->
+        <div class="action-buttons">
+            <a href="tel:7009148883" class="btn btn-call">
+                <i class="fa-solid fa-phone-volume"></i> Call To Book Slot
+            </a>
+            <a href="https://instagram.com/crack.head.gaming.studio" target="_blank" class="btn btn-insta">
+                <i class="fa-brands fa-instagram"></i> Follow on Instagram
+            </a>
+        </div>
+
+        <!-- Games Portfolio Section -->
+        <section id="games">
+            <h2 class="section-title title-pink">Game Library</h2>
+            <div class="games-container">
+                
+                <!-- One Player Games -->
+                <div class="game-box single-player-box">
+                    <h3 style="color: var(--cyan);"><i class="fa-solid fa-gamepad"></i> One Player Games</h3>
+                    <ul class="game-list">
+                        <li>GTA 5</li>
+                        <li>Spider-Man 2</li>
+                        <li>Uncharted: A Thief's End</li>
+                        <li>Assetto Corsa</li>
+                        <li>God of War Ragnarok</li>
+                        <li>Asphalt</li>
+                        <li>God of War (2018)</li>
+                        <li>Cricket 24</li>
+                        <li>Scario</li>
+                        <li>Uncharted: The Lost Legacy</li>
+                    </ul>
+                </div>
+
+                <!-- Two Player Games -->
+                <div class="game-box two-player-box">
+                    <h3 style="color: var(--pink);"><i class="fa-solid fa-user-friends"></i> Two Player Games</h3>
+                    <ul class="game-list">
+                        <li>SC26</li>
+                        <li>Tekken 8</li>
+                        <li>Mortal Kombat 1</li>
+                        <li>Injustice 2</li>
+                        <li>Street Fighter V</li>
+                        <li>Street Fighter 6</li>
+                        <li>WWE 2K25</li>
+                        <li>Mortal Kombat 2</li>
+                        <li style="grid-column: span 2; text-align: center; font-weight: bold; color: var(--pink);">And Many More!</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing">
+            <h2 class="section-title title-cyan">Multiplayer Pricing</h2>
+            <div class="pricing-grid">
+                
+                <!-- 1 Player -->
+                <div class="price-card cyan-card">
+                    <h3><i class="fa-solid fa-user"></i> 1 Player</h3>
+                    <div class="price-row">
+                        <div class="duration">Half N Hour</div>
+                        <div class="amount">Rs 100</div>
+                    </div>
+                    <div class="price-row">
+                        <div class="duration">One Hour</div>
+                        <div class="amount">Rs 180</div>
+                    </div>
+                </div>
+
+                <!-- 2 Players -->
+                <div class="price-card pink-card">
+                    <h3><i class="fa-solid fa-user-group"></i> 2 Players</h3>
+                    <div class="price-row">
+                        <div class="duration">Half N Hour</div>
+                        <div class="amount">Rs 160</div>
+                    </div>
+                    <div class="price-row">
+                        <div class="duration">One Hour</div>
+                        <div class="amount">Rs 280</div>
+                    </div>
+                </div>
+
+                <!-- 3 Players -->
+                <div class="price-card cyan-card">
+                    <h3><i class="fa-solid fa-users"></i> 3 Players</h3>
+                    <div class="price-row">
+                        <div class="duration">Half N Hour</div>
+                        <div class="amount">Rs 230</div>
+                    </div>
+                    <div class="price-row">
+                        <div class="duration">One Hour</div>
+                        <div class="amount">Rs 380</div>
+                    </div>
+                </div>
+
+                <!-- 4 Players -->
+                <div class="price-card pink-card">
+                    <h3><i class="fa-solid fa-users-rectangle"></i> 4 Players</h3>
+                    <div class="price-row">
+                        <div class="duration">Half N Hour</div>
+                        <div class="amount">Rs 300</div>
+                    </div>
+                    <div class="price-row">
+                        <div class="duration">One Hour</div>
+                        <div class="amount">Rs 500</div>
+                    </div>
+                </div>
+
+                <!-- Daily Pass -->
+                <div class="daily-pass">
+                    <h3><i class="fa-solid fa-bolt"></i> Daily Pass</h3>
+                    <p style="text-transform: uppercase; letter-spacing: 1px; color: var(--text-gray);">Unlimited Play (All Pass)</p>
+                    <div class="pass-price">Rs 799</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Perks Section -->
+        <section id="why-us">
+            <h2 class="section-title title-cyan">Why Choose Us?</h2>
+            <div class="features-grid">
+                <div class="feature-item"><i class="fa-solid fa-fire"></i>Epic Games</div>
+                <div class="feature-item"><i class="fa-solid fa-trophy"></i>Legendary Adventures</div>
+                <div class="feature-item"><i class="fa-solid fa-crosshairs"></i>Intense Battles</div>
+                <div class="feature-item"><i class="fa-solid fa-users"></i>Strong Community</div>
+                <div class="feature-item"><i class="fa-solid fa-wand-magic-sparkles"></i>Pure Gaming</div>
+            </div>
+        </section>
+
+    </div>
+<!-- Payment QR Section -->
+<section id="payment">
+    <h2 class="section-title title-pink">Scan & Pay</h2>
+
+    <div class="payment-card">
+
+        <div class="payment-copy">
+            <h3><i class="fa-solid fa-qrcode"></i> Easy UPI Payment</h3>
+
+            <p>
+                Slot booking ke liye QR Code scan karein aur payment ka
+                screenshot hume WhatsApp par bhej dein.
+            </p>
+
+            <div class="upi-id">
+                <i class="fa-solid fa-bolt"></i>
+                7009148883@pthdfc
+            </div>
+        </div>
+
+        <div class="qr-frame">
+            <img src="images/payment-qr.jpeg" alt="UPI Payment QR Code">
+        </div>
+
+    </div>
+<iframe src="slider.html"
+       style="width:100%; height:420px; border:none; margin-top:30px;">
+</iframe>
+</section>
+    <!-- Contact & Footer Section -->
+    <footer>
+        <div class="contact-info">
+            <div class="info-row">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <strong>Call Us:</strong><br>
+                    <a href="tel:7009148883" style="color: inherit; text-decoration: none;">7009148883</a>
+                </div>
+            </div>
+            <div class="info-row">
+                <i class="fa-brands fa-instagram"></i>
+                <div>
+                    <strong>Follow Us:</strong><br>
+                    <a href="https://instagram.com/crack.head.gaming.studio" target="_blank" style="color: inherit; text-decoration: none;">@crack.head.gaming.studio</a>
+                </div>
+            </div>
+            <div class="info-row">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <strong>Find Us:</strong><br>
+                    120 feet road, Next To Grover & Co. office,<br>Jalandhar, Punjab
+                </div>
+            </div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.05); margin-bottom: 20px;">
+        <p class="footer-tagline">One Studio. Endless Adventures. <span>Play More. Win More.</span></p>
+    </footer>
+
+    <script>
+        const sliderTrack = document.querySelector('.slider-track');
+        const sliderDots = document.querySelectorAll('.slider-dot');
+        let activeSlide = 0;
+
+        function showSlide(index) {
+            activeSlide = index;
+            sliderTrack.style.transform = `translateX(-${index * 33.333}%)`;
+            sliderDots.forEach((dot, dotIndex) => {
+                dot.classList.toggle('active', dotIndex === index);
+            });
+        }
+
+        sliderDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showSlide(index));
+        });
+
+        setInterval(() => {
+            showSlide((activeSlide + 1) % sliderDots.length);
+        }, 3000);
+    </script>
+</body>
+</html>
